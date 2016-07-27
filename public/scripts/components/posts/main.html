@@ -1,0 +1,17 @@
+<div class="panel" v-for="post in posts">
+    <div class="panel-body">
+        <div class="media" style="margin-bottom: 50px;">
+            <div class="media-left media-middle">
+                <a v-bind:href="'/posts/' + post.id">
+                    <img class="media-object" src="/public/images/user.png" alt="user" style="width: 50px;">
+                </a>
+            </div>
+            <div class="media-body">
+                <a  v-bind:href="'/posts/' + post.id"><h4>{{post.title}}</h4></a>
+
+                Comments <small class="text-muted">{{post.comment}}</small>
+                Likes <small class="text-muted">{{post.like}}</small>
+            </div>
+        </div>
+    </div>
+</div>

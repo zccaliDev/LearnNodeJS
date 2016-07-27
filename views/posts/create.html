@@ -1,0 +1,19 @@
+{%extends "layouts/user.html"%}
+
+{%block content%}
+    <div style="width:60%" class="panel">
+        <div class="panel-body">
+            <form action="/create" method="post">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label>Body</label>
+                    <textarea class="form-control" name="body" placeholder="Post body"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+{%endblock%}

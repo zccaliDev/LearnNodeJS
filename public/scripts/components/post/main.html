@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="media" style="margin-bottom: 50px;">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="/public/images/user.png" alt="user" style="width: 50px;">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{post.title}}</h4>
+                <small class="text-muted">by {{post.user.name}} </small>
+                <small v-time-format="post.createdAt" class="text-right"></small>
+                <p style="margin-top: 10px;">{{post.body}}</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="pull-right">
+                <likes v-bind:id="post.id"></likes>
+            </div>
+        </div>
+        <div class="well">
+            <comments :id="post.id"></comments>
+        </div>
+    </div>
+</div>

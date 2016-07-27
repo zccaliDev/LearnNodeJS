@@ -1,0 +1,14 @@
+<div class="media" v-for="comment in comments">
+    <div class="media-left media-middle">
+        <a href="#">
+            <img class="media-object" src="/public/images/user.png" alt="user" style="width: 20px;">
+        </a>
+    </div>
+    <div class="media-body">
+        <h6 class="media-heading">{{comment.user.name}}
+            <small v-time-format="comment.CreatedAt"></small>
+        </h6>
+        <small>{{comment.body}}</small>
+    </div>
+</div>
+<textarea class="form-control" @keyup.enter="create()" rows="2" v-model="newComment"></textarea>
